@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact | 80 Palgong</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <img src="assets/character.png"
+         class="floating-character"
+         alt="Palgong Character">
+
+    <header>
+        <a href="index.html" class="logo">🍏 80</a>
+
+        <nav>
+            <a href="index.html">HOME</a>
+            <a href="works.html">WORKS</a>
+            <a href="about.html">ABOUT</a>
+            <a href="contact.html">CONTACT</a>
+        </nav>
+    </header>
+
+
+    <main class="page">
+
+        <h1>CONTACT 🍏</h1>
+
+        <p class="page-intro">
+            작업 문의를 남겨주세요!
+        </p>
+
+
+        <!-- 나중에 Formspree 주소를 action에 넣을 거야 -->
+        <form class="contact-form"
+              action="YOUR_FORMSPREE_URL"
+              method="POST">
+
+            <label>NAME / 닉네임</label>
+            <input type="text"
+                   name="name"
+                   required>
+
+
+            <label>E-MAIL</label>
+            <input type="email"
+                   name="email"
+                   required>
+
+
+            <label>작업 종류</label>
+
+            <select name="project_type">
+
+                <option>PV</option>
+                <option>MV</option>
+                <option>Commission</option>
+                <option>Other</option>
+
+            </select>
+
+
+            <label>예산</label>
+            <input type="text"
+                   name="budget">
+
+
+            <label>희망 마감일</label>
+            <input type="date"
+                   name="deadline">
+
+
+            <label>참고 영상 / 링크</label>
+            <input type="url"
+                   name="reference">
+
+
+            <label>작업 내용</label>
+
+            <textarea name="details"
+                      rows="8"
+                      required></textarea>
+
+
+            <button type="submit">
+                SEND INQUIRY 🍏
+            </button>
+
+        </form>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
