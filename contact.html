@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,12 +12,8 @@
 
 <body>
 
-    <img src="assets/character.png"
-         class="floating-character"
-         alt="Palgong Character">
-
     <header>
-        <a href="index.html" class="logo">🍏 80</a>
+        <a href="index.html" class="logo">80 / Palgong</a>
 
         <nav>
             <a href="index.html">HOME</a>
@@ -29,74 +26,77 @@
 
     <main class="page">
 
-        <h1>CONTACT 🍏</h1>
+        <h1 class="page-title">CONTACT</h1>
 
-        <p class="page-intro">
-            작업 문의를 남겨주세요!
-        </p>
+        <div class="contact-content">
 
+            <p>
+                PV 작업 문의나 커미션 관련 문의는<br>
+                아래 폼을 이용해주세요! 💚
+            </p>
 
-        <!-- 나중에 Formspree 주소를 action에 넣을 거야 -->
-        <form class="contact-form"
-              action="YOUR_FORMSPREE_URL"
-              method="POST">
+            <form
+                class="contact-form"
+                action="https://formspree.io/f/xppzyzly"
+                method="POST"
+            >
 
-            <label>NAME / 닉네임</label>
-            <input type="text"
-                   name="name"
-                   required>
-
-
-            <label>E-MAIL</label>
-            <input type="email"
-                   name="email"
-                   required>
-
-
-            <label>작업 종류</label>
-
-            <select name="project_type">
-
-                <option>PV</option>
-                <option>MV</option>
-                <option>Commission</option>
-                <option>Other</option>
-
-            </select>
+                <label for="name">NAME</label>
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="이름 또는 닉네임"
+                    required
+                >
 
 
-            <label>예산</label>
-            <input type="text"
-                   name="budget">
+                <label for="email">EMAIL</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="답변 받을 이메일"
+                    required
+                >
 
 
-            <label>희망 마감일</label>
-            <input type="date"
-                   name="deadline">
+                <label for="subject">SUBJECT</label>
+                <input
+                    type="text"
+                    id="subject"
+                    name="subject"
+                    placeholder="문의 제목"
+                    required
+                >
 
 
-            <label>참고 영상 / 링크</label>
-            <input type="url"
-                   name="reference">
+                <label for="message">MESSAGE</label>
+                <textarea
+                    id="message"
+                    name="message"
+                    placeholder="작업 내용이나 문의사항을 자유롭게 적어주세요!"
+                    required
+                ></textarea>
 
 
-            <label>작업 내용</label>
+                <button type="submit">
+                    SEND MESSAGE →
+                </button>
 
-            <textarea name="details"
-                      rows="8"
-                      required></textarea>
+            </form>
 
-
-            <button type="submit">
-                SEND INQUIRY 🍏
-            </button>
-
-        </form>
+        </div>
 
     </main>
 
 
-    <script src="script.js"></script>
+    <img
+        src="assets/character.png"
+        class="floating-character"
+        alt="Palgong character"
+    >
 
 </body>
+
 </html>
