@@ -1,7 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
 
+
+/* =========================
+   BASIC
+========================= */
+
 * {
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -11,11 +20,15 @@ body {
     font-family: 'Jua', sans-serif;
 }
 
-/* HEADER */
+
+/* =========================
+   HEADER
+========================= */
 
 header {
     width: 100%;
     padding: 25px 50px;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -36,6 +49,8 @@ nav a {
     color: #263d24;
     text-decoration: none;
     font-size: 18px;
+
+    transition: 0.25s;
 }
 
 nav a:hover {
@@ -43,13 +58,17 @@ nav a:hover {
 }
 
 
-/* HOME */
+/* =========================
+   HOME
+========================= */
 
 .hero {
     min-height: calc(100vh - 90px);
+
     display: flex;
     justify-content: center;
     align-items: center;
+
     text-align: center;
 }
 
@@ -66,8 +85,10 @@ nav a:hover {
 
 .hero-number {
     margin: 0;
+
     font-size: 110px;
     line-height: 0.9;
+
     color: #78a94b;
 }
 
@@ -78,18 +99,24 @@ nav a:hover {
 
 .hero-description {
     margin: 0 0 35px;
+
     font-size: 21px;
     line-height: 1.7;
 }
 
 .work-button {
     display: inline-block;
+
     padding: 14px 30px;
+
     border: 2px solid #263d24;
     border-radius: 30px;
+
     color: #263d24;
     text-decoration: none;
+
     font-size: 18px;
+
     transition: 0.25s;
 }
 
@@ -99,19 +126,26 @@ nav a:hover {
 }
 
 
-/* FLOATING CHARACTER */
+/* =========================
+   FLOATING CHARACTER
+========================= */
 
 .floating-character {
     position: fixed;
+
     right: 35px;
     bottom: 30px;
+
     width: 150px;
     height: auto;
+
     z-index: 9999;
+
     animation: floating 3s ease-in-out infinite;
 }
 
 @keyframes floating {
+
     0% {
         transform: translateY(0) rotate(-3deg);
     }
@@ -123,46 +157,64 @@ nav a:hover {
     100% {
         transform: translateY(0) rotate(-3deg);
     }
+
 }
 
 
-/* OTHER PAGES */
+/* =========================
+   COMMON PAGE
+========================= */
 
 .page {
     width: 90%;
     max-width: 1100px;
+
     margin: 0 auto;
+
     padding: 80px 0;
 }
 
 .page-title {
     margin: 0 0 60px;
+
     text-align: center;
+
     font-size: 55px;
 }
 
 
-/* WORKS */
+/* =========================
+   WORKS
+========================= */
 
 .works-grid {
     display: grid;
+
     grid-template-columns: repeat(2, 1fr);
+
     gap: 35px;
 }
 
 .work-card {
     position: relative;
+
     overflow: hidden;
+
     aspect-ratio: 16 / 9;
+
     border-radius: 18px;
+
     cursor: pointer;
 }
 
 .work-card img {
     width: 100%;
     height: 100%;
+
     display: block;
+
     object-fit: cover;
+
     transition: transform 0.4s;
 }
 
@@ -170,20 +222,31 @@ nav a:hover {
     transform: scale(1.05);
 }
 
+
+/* WORK OVERLAY */
+
 .work-overlay {
     position: absolute;
+
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
+
     display: flex;
     flex-direction: column;
+
     justify-content: center;
     align-items: center;
+
     text-align: center;
+
     background: rgba(38, 61, 36, 0.82);
+
     color: white;
+
     opacity: 0;
+
     transition: opacity 0.3s;
 }
 
@@ -193,44 +256,64 @@ nav a:hover {
 
 .work-overlay h2 {
     margin: 0 0 8px;
+
     font-size: 30px;
 }
 
 .work-overlay p {
     margin: 0;
+
     font-size: 18px;
 }
+
+
+/* PLAY BUTTON */
 
 .play-button {
     width: 55px;
     height: 55px;
+
     margin-top: 25px;
+
     border-radius: 50%;
+
     background: #fffdf2;
     color: #263d24;
+
     display: flex;
     justify-content: center;
     align-items: center;
+
     font-size: 22px;
 }
 
 
-/* VIDEO MODAL */
+/* =========================
+   VIDEO MODAL
+========================= */
 
 .video-modal {
     position: fixed;
+
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
+
     display: flex;
+
     justify-content: center;
     align-items: center;
+
     padding: 30px;
+
     background: rgba(0, 0, 0, 0.75);
+
     opacity: 0;
     visibility: hidden;
+
     z-index: 10000;
+
     transition: 0.25s;
 }
 
@@ -241,30 +324,45 @@ nav a:hover {
 
 .video-modal-content {
     position: relative;
+
     width: min(900px, 95vw);
+
     padding: 20px;
+
     border-radius: 20px;
+
     background: #fffdf2;
 }
 
 .video-modal iframe {
     width: 100%;
+
     aspect-ratio: 16 / 9;
+
     border: none;
+
     border-radius: 12px;
 }
 
 .close-modal {
     position: absolute;
+
     top: 10px;
     right: 15px;
+
     width: 40px;
     height: 40px;
+
     border: none;
+
     border-radius: 50%;
+
     background: white;
+
     font-size: 30px;
+
     cursor: pointer;
+
     z-index: 2;
 }
 
@@ -281,43 +379,194 @@ nav a:hover {
 }
 
 
-/* ABOUT / CONTACT */
+/* =========================
+   ABOUT
+========================= */
 
 .about-content {
     max-width: 750px;
+
     margin: 0 auto;
+
     text-align: center;
 }
 
 .about-content h2 {
     margin-top: 45px;
+
     font-size: 32px;
 }
 
 .about-content p {
     font-size: 19px;
+
     line-height: 1.8;
 }
 
+
+/* =========================
+   CONTACT
+========================= */
+
 .contact-content {
     max-width: 650px;
+
     margin: 0 auto;
 }
 
-.contact-content p {
+.contact-content > p {
     text-align: center;
+
     font-size: 19px;
+
     line-height: 1.7;
 }
 
 
-/* MOBILE */
+/* CONTACT FORM */
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+
+    margin-top: 40px;
+}
+
+
+/* LABEL */
+
+.contact-form label {
+    margin-top: 10px;
+
+    color: #263d24;
+
+    font-size: 16px;
+}
+
+
+/* INPUT / TEXTAREA */
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+
+    padding: 15px 18px;
+
+    border: 2px solid #d5decf;
+
+    border-radius: 12px;
+
+    background: white;
+
+    color: #263d24;
+
+    font-family: 'Jua', sans-serif;
+
+    font-size: 16px;
+
+    outline: none;
+
+    transition: 0.25s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #78a94b;
+}
+
+
+/* SELECT */
+
+.contact-form select {
+    width: 100%;
+
+    padding: 15px 18px;
+
+    border: 2px solid #d5decf;
+
+    border-radius: 12px;
+
+    background: white;
+
+    color: #263d24;
+
+    font-family: 'Jua', sans-serif;
+
+    font-size: 16px;
+
+    outline: none;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+}
+
+.contact-form select:focus {
+    border-color: #78a94b;
+}
+
+
+/* PLACEHOLDER */
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #a5afa0;
+}
+
+
+/* MESSAGE */
+
+.contact-form textarea {
+    min-height: 180px;
+
+    resize: vertical;
+}
+
+
+/* SUBMIT BUTTON */
+
+.contact-form button {
+    margin-top: 20px;
+
+    padding: 15px 25px;
+
+    border: 2px solid #263d24;
+
+    border-radius: 30px;
+
+    background: #263d24;
+
+    color: #fffdf2;
+
+    font-family: 'Jua', sans-serif;
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+}
+
+.contact-form button:hover {
+    background: #78a94b;
+
+    border-color: #78a94b;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
 
 @media (max-width: 700px) {
 
     header {
         padding: 20px;
+
         flex-direction: column;
+
         gap: 15px;
     }
 
@@ -328,6 +577,9 @@ nav a:hover {
     nav a {
         font-size: 15px;
     }
+
+
+    /* HOME */
 
     .hero-number {
         font-size: 80px;
@@ -341,30 +593,47 @@ nav a:hover {
         font-size: 17px;
     }
 
+
+    /* PAGE */
+
     .page {
         padding: 50px 0;
     }
 
     .page-title {
         font-size: 42px;
+
+        margin-bottom: 40px;
     }
+
+
+    /* WORKS */
 
     .works-grid {
         grid-template-columns: 1fr;
     }
 
+
+    /* CHARACTER */
+
     .floating-character {
         width: 100px;
+
         right: 15px;
         bottom: 15px;
     }
 
-.hero {
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    flex-direction: column !important;
-    text-align: center !important;
-    min-height: 80vh !important;
-}
+
+    /* CONTACT */
+
+    .contact-content {
+        width: 100%;
+    }
+
+    .contact-form input,
+    .contact-form select,
+    .contact-form textarea {
+        font-size: 15px;
+    }
+
 }
