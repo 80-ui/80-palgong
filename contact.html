@@ -26,14 +26,15 @@
 
     <main class="page">
 
-        <h1 class="page-title">CONTACT</h1>
+        <h1 class="page-title">의뢰 신청서</h1>
 
         <div class="contact-content">
 
             <p>
-                PV 작업 문의나 커미션 관련 문의는<br>
-                아래 폼을 이용해주세요! 💚
+                PV 작업 의뢰를 원하신다면<br>
+                아래 신청서를 작성해주세요! 💚
             </p>
+
 
             <form
                 class="contact-form"
@@ -41,47 +42,97 @@
                 method="POST"
             >
 
-                <label for="name">NAME</label>
+                <!-- 이름 / 닉네임 -->
+                <label for="name">이름 / 닉네임</label>
+
                 <input
                     type="text"
                     id="name"
                     name="name"
-                    placeholder="이름 또는 닉네임"
+                    placeholder="이름 또는 닉네임을 입력해주세요"
                     required
                 >
 
 
-                <label for="email">EMAIL</label>
+                <!-- 이메일 -->
+                <label for="email">이메일</label>
+
                 <input
                     type="email"
                     id="email"
                     name="email"
-                    placeholder="답변 받을 이메일"
+                    placeholder="답변 받을 이메일을 입력해주세요"
                     required
                 >
 
 
-                <label for="subject">SUBJECT</label>
+                <!-- 작업 종류 -->
+                <label for="work-type">작업 종류</label>
+
+                <select
+                    id="work-type"
+                    name="work_type"
+                    required
+                >
+                    <option value="" disabled selected>
+                        작업 종류를 선택해주세요
+                    </option>
+
+                    <option value="PV">PV</option>
+                    <option value="MV">MV</option>
+                    <option value="영상 편집">영상 편집</option>
+                    <option value="기타">기타</option>
+                </select>
+
+
+                <!-- 예산 -->
+                <label for="budget">예산</label>
+
                 <input
                     type="text"
-                    id="subject"
-                    name="subject"
-                    placeholder="문의 제목"
+                    id="budget"
+                    name="budget"
+                    placeholder="예: 50,000원 / 협의"
                     required
                 >
 
 
-                <label for="message">MESSAGE</label>
+                <!-- 희망 마감일 -->
+                <label for="deadline">희망 마감일</label>
+
+                <input
+                    type="date"
+                    id="deadline"
+                    name="deadline"
+                    required
+                >
+
+
+                <!-- 참고 영상 / 링크 -->
+                <label for="reference">참고 영상 / 링크</label>
+
+                <input
+                    type="url"
+                    id="reference"
+                    name="reference"
+                    placeholder="YouTube, Drive 등의 링크"
+                >
+
+
+                <!-- 작업 내용 -->
+                <label for="message">작업 내용</label>
+
                 <textarea
                     id="message"
                     name="message"
-                    placeholder="작업 내용이나 문의사항을 자유롭게 적어주세요!"
+                    placeholder="원하시는 작업 내용을 자세하게 적어주세요."
                     required
                 ></textarea>
 
 
+                <!-- 제출 -->
                 <button type="submit">
-                    SEND MESSAGE →
+                    제출 →
                 </button>
 
             </form>
